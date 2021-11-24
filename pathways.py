@@ -3,7 +3,7 @@
 ##  Name:
         pathways.py
 
-##  Version: [1.0]
+##  Version: [2.0]
 
 ##  Author:
         Cristina Sotomayor <cristina@lcg.unam.mx>
@@ -34,15 +34,14 @@ from genes import GetGenes
 
 
 def GetPathway(kegg_id):
-    """
-    Gets pathway from KEGG database, reads data and returns Pathway object.
+    """Gets pathway from KEGG database, reads data and returns Pathway object.
 
     Parameters:
         - kegg_id (string): KEGG identifier for the pathway, organism code + five
         digit number
 
     Returns:
-        - Pathway object
+        - Pathway object as defined in KEGG.KGML
     """
     # Look for kegg_id, if not found, alert user and exit function
     try:
@@ -54,3 +53,29 @@ def GetPathway(kegg_id):
     # If kegg_id is found and kgml file read, turn into Pathway object
     pathway = KGML_parser.read(result)
     return pathway
+
+
+def ParsePathway(pathway):
+    """Gets Pathway object, iterates over genes found in it, and returns list with
+    Gene objects for those genes.
+
+    Parameters:
+        - pathway (Pathway): pathway from KEGG database as returned by GetPathway
+                function
+
+    Returns:
+        - List with genes as Gene objects from Bio.KEGG.Gene
+    """
+    # List to store genes
+    genes = []
+
+    for entry in pathway.genes:
+        # Some entries return codes separated by spaces, replace for + to find
+        # them in database
+        entry = entry.name.replace(' ', '+')
+        gene = GetGenes(entry)
+        # If GetGenes was successful
+        if gene:
+            genes.extend(gene)
+
+    return genes
