@@ -3,7 +3,7 @@
 ##  Name:
         pathways.py
 
-##  Version: [2.0]
+##  Version: [2.1]
 
 ##  Author:
         Cristina Sotomayor <cristina@lcg.unam.mx>
@@ -23,7 +23,9 @@
 ##  Requirements:
         Bio.KEGG
 
-## Example
+## Example:
+        pathway = GetPathway('hsa05203')
+        genes = ParsePathway(pathway)
 
 '''
 
@@ -79,3 +81,24 @@ def ParsePathway(pathway):
             genes.extend(gene)
 
     return genes
+
+genes
+import pandas as pd
+
+def ListToData(genes):
+    gene_list = []
+    for gene in genes:
+        Entry = gene.entry
+        Name = gene.name
+        Pos = gene.position
+        Path  = gene.pathways
+        gene_list.append([Entry, Name, Pos, Path])
+
+    df = pd.DataFrame(gene_list, columns=['Entry', 'Name', 'Position', 'Pathways'])
+    return df
+
+df = list_to_data(genes)
+
+df
+
+genes[0].__dict__.keys()
