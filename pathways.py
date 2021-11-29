@@ -81,24 +81,3 @@ def ParsePathway(pathway):
             genes.extend(gene)
 
     return genes
-
-genes
-import pandas as pd
-
-def ListToData(genes):
-    gene_list = []
-    for gene in genes:
-        Entry = gene.entry
-        Name = gene.name
-        Pos = gene.position
-        Path  = gene.pathways
-        gene_list.append([Entry, Name, Pos, Path])
-
-    df = pd.DataFrame(gene_list, columns=['Entry', 'Name', 'Position', 'Pathways'])
-    return df
-
-df = list_to_data(genes)
-
-df
-
-genes[0].__dict__.keys()
