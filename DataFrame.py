@@ -1,7 +1,7 @@
 '''
 ##  Name:
         DataFrame.py
-##  Version: [1.0]
+##  Version: [1.1]
 ##  Author:
         Cristina Sotomayor <cristina@lcg.unam.mx>
         Luz Rosario Guevara <lguevara@lcg.unam.mx>
@@ -17,6 +17,14 @@
 ##  Requirements:
         pandas
 ## Example
+
+    Imput:
+    genes
+        Function:
+        ListToData(Genes)
+    Output:
+    df
+
 '''
 
 import pandas as pd
