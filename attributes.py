@@ -61,6 +61,7 @@ def ListToData(genes):
     df = pd.DataFrame(gene_list, columns=['Entry', 'Name', 'Position', 'Pathways'])
     return df
 
+
 def ReadPathways(path):
     """Read DataFrame with pathway gene data to obtain data in correct format.
 
@@ -82,6 +83,7 @@ def ReadPathways(path):
     df.Pathways = df.Pathways.apply(eval)
 
     return df
+
 
 def SplitData(df):
     """For DataFrames with list of pathways, return DataFrame with one line per

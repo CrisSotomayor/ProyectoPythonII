@@ -36,7 +36,7 @@ import pandas as pd
 
 from genes import *
 from pathways import *
-from read_data import *
+from attributes import *
 
 
 ## Arguments
