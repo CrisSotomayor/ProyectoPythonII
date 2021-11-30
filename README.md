@@ -35,3 +35,11 @@ En esta gráfica podemos observar que no hay una sola vía de señalización que
 ### Conclusiones
 
 Las mutaciones asociadas al gen p53 y la vía de señalización FOXO tienen evidencia cuantitativa de ser variaciones asociadas a la supresión de tumores, y los residuos proteicos alterados son comúnmente aislados de tumores. Por medio de este proyecto, vimos cómo podemos recopilar diferentes tipos de información de la base de datos KEGG, en este caso genes y vías metabólicas, para obtener información de los mecanismos involucrados en esta enfermedad. Podríamos repetir este proceso para diferentes vías metabólicas, solo cambiando el código de acceso de cada vía, e incluso modificar el código para recopilar más información, por ejemplo, incluir los links que da KEGG a otras bases de datos, y usar otros módulos como `Bio.Entrez` para obtener información de otras bases. El saber cómo trabajar con diferentes bases de datos a través de programas que nosotros mismos creamos es una herramienta muy útil y muy versátil para acceder y manejar información, y el uso de herramientas como `pandas`, `matplotlib` y `seaborn` amplía lo que podemos llevar a cabo con esos datos.
+
+### Referencias 
+
+* Farhan, M., Wang, H., Gaur, U., Little, P., Xu J., Zheng, W. (2017) FOXO Signaling Pathways as Therapeutic Targets in Cancer, NCBI. doi: 10.7150/ijbs.20052
+* Silva, A., Gutiérrez, A., Arias, C., Lazaro, I. (2006) Estructura, regulación y funciones del gen supresor de tumores p53, Congreso virtual Hispanoamérica de Anatomía Patológica. https://conganat.uninet.edu/conferencias/C016/index.html
+* Carter, M., Brunet, A. (2007) FOXO transcription factors, NCBI. doi:10.1016/j.cub.2007.01.008
+
+
