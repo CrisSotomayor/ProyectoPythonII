@@ -49,7 +49,8 @@ def GetPathway(kegg_id):
     try:
         result = kegg_get(kegg_id, 'kgml').read()
     except:
-        print('Pathway file not found. Check KEGG ID and try again. ')
+        print(f'Pathway file for identifier {kegg_id} not found. '
+                'Check KEGG ID and try again. ')
         return
 
     # If kegg_id is found and kgml file read, turn into Pathway object
