@@ -18,5 +18,5 @@ Utilizar la base de datos [KEGG (Kyoto Encyclopedia of Genes and Genomes)](https
 5. Utilizamos las librerías `seaborn` y `matplotlib` para obtener y guardar las gráficas que representan los resultados obtenidos. 
 
 ### Resultados
-![Vias][https://github.com/CrisSotomayor/ProyectoPythonII/blob/main/figures/signif_pathways.png]
+![Vias](https://github.com/CrisSotomayor/ProyectoPythonII/blob/main/figures/signif_pathways.png "Vias de señalizacion")
 ![Genes][https://github.com/CrisSotomayor/ProyectoPythonII/blob/main/figures/signif_genes.png]
