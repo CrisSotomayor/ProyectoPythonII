@@ -133,7 +133,8 @@ def GetGenes(kegg_id):
     try:
         handle = kegg_get(kegg_id)
     except:
-        print('Gene file not found. Check KEGG ID and try again. ')
+        print(f'Gene file for identifier {kegg_id} not found. '
+              'Check KEGG ID and try again. ')
         return
 
     # If kegg_id is found and file read, parse result to get Gene objects
