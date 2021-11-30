@@ -1,6 +1,6 @@
 '''
 ##  Name:
-        read_data.py
+        attributes.py
 
 ##  Version: [2.0]
 
@@ -14,7 +14,7 @@
         Functions to read data from pathways.
 
 ##  Usage:
-        python read_data.py
+        python attributes.py
 
 ##  Arguments:
         None
@@ -27,7 +27,7 @@
     Input:
         genes
     Function:
-        ListToData(Genes)
+        ListToData(genes)
     Output:
         df
 
