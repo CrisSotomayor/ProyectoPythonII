@@ -3,7 +3,7 @@
 ##  Name:
         pathways.py
 
-##  Version: [2.1]
+##  Version: [2.2]
 
 ##  Author:
         Cristina Sotomayor <cristina@lcg.unam.mx>
@@ -24,18 +24,18 @@
         Bio.KEGG
 
 ## Example:
-        pathway = GetPathway('hsa05203')
-        genes = ParsePathway(pathway)
+        pathway = get_pathway('hsa05203')
+        genes = parse_pathway(pathway)
 
 '''
 
 from Bio.KEGG.KGML import KGML_parser
 from Bio.KEGG.REST import kegg_get
 
-from genes import GetGenes
+from genes import get_genes
 
 
-def GetPathway(kegg_id):
+def get_pathway(kegg_id):
     """Gets pathway from KEGG database, reads data and returns Pathway object.
 
     Parameters:
@@ -58,12 +58,12 @@ def GetPathway(kegg_id):
     return pathway
 
 
-def ParsePathway(pathway):
+def parse_pathway(pathway):
     """Gets Pathway object, iterates over genes found in it, and returns list with
     Gene objects for those genes.
 
     Parameters:
-        - pathway (Pathway): pathway from KEGG database as returned by GetPathway
+        - pathway (Pathway): pathway from KEGG database as returned by get_pathway
                 function
 
     Returns:
@@ -76,8 +76,8 @@ def ParsePathway(pathway):
         # Some entries return codes separated by spaces, replace for + to find
         # them in database
         entry = entry.name.replace(' ', '+')
-        gene = GetGenes(entry)
-        # If GetGenes was successful
+        gene = get_genes(entry)
+        # If get_genes was successful
         if gene:
             genes.extend(gene)
 

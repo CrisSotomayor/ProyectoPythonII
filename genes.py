@@ -3,7 +3,7 @@
 ##  Name:
         genes.py
 
-##  Version: [2.1]
+##  Version: [2.2]
 
 ##  Author:
         Cristina Sotomayor <cristina@lcg.unam.mx>
@@ -24,7 +24,7 @@
         Bio.KEGG, pandas
 
 ## Example
-        gene = GetGenes('hsa:7157')
+        gene = get_genes('hsa:7157')
 
 '''
 from Bio.KEGG.REST import kegg_get
@@ -55,7 +55,7 @@ class Gene(Record):
         self.pathways = []
 
 
-def ParseGenes(handle):
+def parse_genes(handle):
     """Parse KEGG Gene file and return iterable. Modified from KEGG.Gene.parse
     (Copyright 2017 by Kozo Nishida.  All rights reserved.).
 
@@ -119,7 +119,7 @@ def ParseGenes(handle):
                 row = (key, value)
                 record.pathways.append(row)
 
-def GetGenes(kegg_id):
+def get_genes(kegg_id):
     """Gets genes from KEGG database, reads data and returns list with Gene
     objects.
 
@@ -138,6 +138,6 @@ def GetGenes(kegg_id):
         return
 
     # If kegg_id is found and file read, parse result to get Gene objects
-    genes = [gene for gene in ParseGenes(handle)]
+    genes = [gene for gene in parse_genes(handle)]
 
     return genes

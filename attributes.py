@@ -2,7 +2,7 @@
 ##  Name:
         attributes.py
 
-##  Version: [2.0]
+##  Version: [2.1]
 
 ##  Authors:
         Luz Rosario Guevara <lguevara@lcg.unam.mx>
@@ -27,7 +27,7 @@
     Input:
         genes
     Function:
-        ListToData(genes)
+        list_to_data(genes)
     Output:
         df
 
@@ -35,7 +35,7 @@
 
 import pandas as pd
 
-def ListToData(genes):
+def list_to_data(genes):
     """Gets object´s list "genes" from genes.py, and returns Data Frame with named attributes.
         Parameters:
             - genes (list):  List with genes as Gene objects from Bio.KEGG.Gene
@@ -62,7 +62,7 @@ def ListToData(genes):
     return df
 
 
-def ReadPathways(path):
+def read_pathways(path):
     """Read DataFrame with pathway gene data to obtain data in correct format.
 
     Parameters:
@@ -85,13 +85,13 @@ def ReadPathways(path):
     return df
 
 
-def SplitData(df):
+def split_data(df):
     """For DataFrames with list of pathways, return DataFrame with one line per
     pathway.
 
     Parameters:
         - df (DataFrame): DataFrame with pathway data, as obtained from
-                        ListToData or ReadPathways functions
+                        list_to_data or read_pathways functions
 
     Returns:
         - New DataFrame with one row for each pathway in each gene's pathway list.

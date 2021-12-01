@@ -2,7 +2,7 @@
 ##  Name:
         analyze_pathways.py
 
-##  Version: [1.0]
+##  Version: [1.1]
 
 ##  Author:
         Cristina Sotomayor <cristina@lcg.unam.mx>
@@ -58,16 +58,16 @@ args = parser.parse_args()
 # Iterate over given IDs and save data for each one
 for pathway_id in args.ids:
     # Get information from database, and obtain individual genes
-    pathway = GetPathway(pathway_id)
+    pathway = get_pathway(pathway_id)
 
     # If pathway was found, save genes, if not, go to next pathway_id
     if pathway:
-        genes = ParsePathway(pathway)
+        genes = parse_pathway(pathway)
     else:
         continue
 
     # Turn information into a DataFrame
-    df_genes = ListToData(genes)
+    df_genes = list_to_data(genes)
 
     # Path, if given, save there, else, save in current directory
     if args.path:
