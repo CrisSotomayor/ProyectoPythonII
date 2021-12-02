@@ -32,6 +32,16 @@ FOXO box es una subfamilia de factores de transcripción asociados a la mitocron
 ![Vias](https://raw.githubusercontent.com/CrisSotomayor/ProyectoPythonII/main/figures/signif_pathways.png "Vias de señalizacion")
 En esta gráfica podemos observar que no hay una sola vía de señalización que sea determinante para el desarrollo de cáncer, ya que una diversidad de vías de señalización se pueden encontrar involucradas en su desarrollo, y se sabe que los genes encontrados previamente pueden participar en varias vías. Resaltamos la presencia de la vía PI3K-Akt, la cual podemos esperar dados los diferentes genes relacionados a ella que encontramos en el paso previo.
 
+También analizamos las vías de señalización más repetidas al considerar todos los genes, donde obtuvimos la siguiente gráfica:
+![Vias_2](https://github.com/CrisSotomayor/ProyectoPythonII/blob/main/figures/signif_pathways_total.png "Vias total")
+Aquí podemos observar que la frecuencia de vpias de señalización cambia su frecuencia, mostrando a la vía fosfatidilinositol 3 kinasa (PI3K/Akt) como la que más recurrencia tiene. PI3K/ Akt está asociada a funciones como el crecimiento celular y la inhibición de la apoptósis. El funcionamiento de esta vía está regulado por la estimulación de más factores moleculares y proteicos que son resultado del crecimiento celular; la mutación o cambios en la expresión de estos factores reguladores promueven una la activación permantente en la vía PI3K, favoreciendo una actividad de metástasis tumoral y resistencia a tratamientos anticancerígenos.
+
+También obtuvimos una gráfica para representar los genes asociados a las vías de señalización comprometidas con más ocurrencias.
+
+Al analizar la ocurrencia de los genes con más repeticiones en estas vías, se puede resaltar la presencia de fosfatidilinositol-4,5-bifosfato, un componente de la membrana fosfoliídica y se asocia l funcionamiento de la señalización celular así como la modulación de canales iónicos asociados a la liberación de neurotransmisores y funciones fisiológicas. La interacción entre fosfatidilinositol-4,5-bifosfato y los canales iónicos permite mantener una corriente constante entre el cambio de gradientes de los canales iónicos. En la gráfica observamos que las subunidades moleculares alpha, beta y delta tienen el mismo número de apariciones asociadas a carcinogénesis cuando nos enfocamos en estas vías de señalización.
+
+![Genes_total](https://github.com/CrisSotomayor/ProyectoPythonII/blob/main/figures/signif_genes_2.png "Genes total")
+
 ### Conclusiones
 
 Las mutaciones asociadas al gen p53 y la vía de señalización FOXO tienen evidencia cuantitativa de ser variaciones asociadas a la supresión de tumores, y los residuos proteicos alterados son comúnmente aislados de tumores. Por medio de este proyecto, vimos cómo podemos recopilar diferentes tipos de información de la base de datos KEGG, en este caso genes y vías metabólicas, para obtener información de los mecanismos involucrados en esta enfermedad. Podríamos repetir este proceso para diferentes vías metabólicas, solo cambiando el código de acceso de cada vía, e incluso modificar el código para recopilar más información, por ejemplo, incluir los links que da KEGG a otras bases de datos, y usar otros módulos como `Bio.Entrez` para obtener información de otras bases. El saber cómo trabajar con diferentes bases de datos a través de programas que nosotros mismos creamos es una herramienta muy útil y muy versátil para acceder y manejar información, y el uso de herramientas como `pandas`, `matplotlib` y `seaborn` amplía lo que podemos llevar a cabo con esos datos.
@@ -41,5 +51,6 @@ Las mutaciones asociadas al gen p53 y la vía de señalización FOXO tienen evid
 * Farhan, M., Wang, H., Gaur, U., Little, P., Xu J., Zheng, W. (2017) FOXO Signaling Pathways as Therapeutic Targets in Cancer, NCBI. doi: 10.7150/ijbs.20052
 * Silva, A., Gutiérrez, A., Arias, C., Lazaro, I. (2006) Estructura, regulación y funciones del gen supresor de tumores p53, Congreso virtual Hispanoamérica de Anatomía Patológica. https://conganat.uninet.edu/conferencias/C016/index.html
 * Carter, M., Brunet, A. (2007) FOXO transcription factors, NCBI. doi:10.1016/j.cub.2007.01.008
-
+* Pinzón, Carlos Eduardo, Serrano, Martha Lucía, & Sanabria, María Carolina. (2009). Papel de la vía fosfatidilinositol 3 kinasa (PI3K/Akt) en humanos. Revista Ciencias de la Salud, 7(2), 47-66. Retrieved December 02, 2021, from http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1692-72732009000200007&lng=en&tlng=es.
+* Pérez, A., Alamilla, J.(2010) El fosfatidilinositol-4,5-bifosfato y sus acciones sobre los canales iónicos. Revista Biomed. https://www.medigraphic.com/pdfs/revbio/bio-2010/bio102f.pdf
 
